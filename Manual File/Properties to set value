@@ -1,0 +1,30 @@
+using System;
+
+class Box
+{
+    // Instance variables
+    private int price;
+    
+
+    // Property to set and get the value of price
+    public int Price
+    {
+        set { price = value; }
+        get { return price; }
+    }
+}
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        // Create an instance of Box
+        Box b1 = new Box();
+
+        // Set the price using the property
+        b1.Price = 200;
+
+        // Display the price to the user
+        Console.WriteLine("The price of the box is: " + b1.Price);
+    }
+}
