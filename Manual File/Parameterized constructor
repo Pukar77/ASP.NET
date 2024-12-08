@@ -1,0 +1,32 @@
+using System;
+
+class Car
+{
+    private int year;
+    private string model;
+
+    // Constructor with parameter, types must be specified
+    public Car(int year, string model)
+    {
+        this.year = year;
+        this.model = model;
+    }
+
+    // Method to display car information
+    public void DisplayInfo()
+    {
+        Console.WriteLine("The year is " + year + " and the model is " + model);
+    }
+}
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        
+        Car c1 = new Car(2012, "Maruti");
+
+        // Call the method to display information
+        c1.DisplayInfo();
+    }
+}
