@@ -1,0 +1,19 @@
+using System;
+
+class Car
+{
+    // Default constructor
+    public Car()
+    {
+        Console.WriteLine("This is the default constructor");
+    }
+}
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        // Create an instance of Car
+        Car c1 = new Car(); // This will call the default constructor
+    }
+}
