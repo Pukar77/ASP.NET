@@ -1,0 +1,45 @@
+using System;
+
+class Box
+{
+    private int x1;
+    private int x2;
+
+    public Box(int x1, int x2)
+    {
+        this.x1 = x1;
+        this.x2 = x2;
+    }
+
+    public void calcsum()
+    {
+        Console.WriteLine("The sum is " + (x1 + x2));
+    }
+}
+
+class Box1 : Box
+{
+    private int y1;
+    private int y2;
+
+    public Box1(int y1, int y2, int x1, int x2) : base(x1, x2)
+    {
+        this.y1 = y1;
+        this.y2 = y2;
+    }
+
+    public void calcdiff()
+    {
+        Console.WriteLine("The difference is " + (y1 - y2));
+    }
+}
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Box1 b = new Box1(3,2,2,4);
+        b.calcsum();
+        b.calcdiff();
+    }
+}
