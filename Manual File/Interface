@@ -1,0 +1,34 @@
+using System;
+
+interface IFirst
+{
+    void Show();
+}
+
+interface ISecond
+{
+    void Display();
+}
+
+class Third : IFirst, ISecond
+{
+    public void Show()
+    {
+        Console.WriteLine("This is the method of the first interface.");
+    }
+
+    public void Display()
+    {
+        Console.WriteLine("This is the method of the second interface.");
+    }
+}
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Third t = new Third();
+        t.Show();
+        t.Display();
+    }
+}
