@@ -1,0 +1,25 @@
+using System;
+
+ abstract class Ques{
+    
+    public abstract void show();
+    public void display(){
+        Console.WriteLine("This is display function inside abstract class");
+    }
+}
+
+class Ans: Ques{
+    public override void show(){
+        Console.WriteLine("This is the method that was described in abstract class");
+    }
+}
+
+class Program{
+
+public static void Main(string[] args){
+    Ans a = new Ans();
+    a.show();
+    a.display();
+}
+
+}
