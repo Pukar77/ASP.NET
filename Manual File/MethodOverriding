@@ -1,0 +1,22 @@
+using System;
+
+class ques{
+    public virtual void  usha(){
+        Console.WriteLine("This is first method");
+    }
+}
+
+class ans : ques{
+    public override void usha(){
+        base.usha();
+        Console.WriteLine("This is ovverrrideen method");
+    }
+}
+
+class Program{
+    public static void Main(string[] args){
+    
+    ans a1 = new ans();
+    a1.usha();
+}
+}
