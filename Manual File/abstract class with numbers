@@ -1,0 +1,30 @@
+using System;
+abstract class Number {
+    public abstract int square(int x);
+    public abstract int cube(int x);
+}
+class Calculation:Number{
+    
+    public override int square(int x){
+        return x*x;
+    }
+     public override int cube(int x){
+        return x*x*x;
+    }
+    public void display(){
+        Console.WriteLine("this is subclass");
+    }
+}
+class Program{
+    static void Main(string[] args){
+        Calculation c1=new Calculation();
+        
+        Console.WriteLine("The square  is "+c1.square(5));
+          Console.WriteLine("The Cube  is "+c1.cube(5));
+          
+          Number n1=c1;
+           Console.WriteLine("The square  is "+n1.square(5));
+          Console.WriteLine("The Cube  is "+n1.cube(5));
+          
+    }
+}
