@@ -1,0 +1,75 @@
+using System;
+
+namespace OOPDemo
+{
+    // Base class (Parent class)
+    public class Person
+    {
+        // Properties (Encapsulation using private fields)
+        private string name; // Backing field
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public int Age { get; set; } // Auto-implemented property
+
+        // Constructor
+        public Person(string name, int age)
+        {
+            Name = name;
+            Age = age;
+        }
+
+        // Method
+        public virtual void DisplayInfo()
+        {
+            Console.WriteLine($"Name: {Name}, Age: {Age}");
+        }
+    }
+
+    // Derived class (Child class) - Inheritance
+    public class Employee : Person
+    {
+        public string Position { get; set; } // Additional property
+
+        // Constructor (calling base class constructor)
+        public Employee(string name, int age, string position) : base(name, age)
+        {
+            Position = position;
+        }
+
+        // Overriding a method (Polymorphism)
+        public override void DisplayInfo()
+        {
+            base.DisplayInfo(); // Call base class method
+            Console.WriteLine($"Position: {Position}");
+        }
+
+        // Additional Method
+        public void Work()
+        {
+            Console.WriteLine($"{Name} is working as a {Position}.");
+        }
+    }
+
+    // Main Program
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Create a Person object
+            Person person = new Person("Alice", 30);
+            Console.WriteLine("Person Information:");
+            person.DisplayInfo();
+            Console.WriteLine();
+
+            // Create an Employee object
+            Employee employee = new Employee("Bob", 25, "Software Engineer");
+            Console.WriteLine("Employee Information:");
+            employee.DisplayInfo();
+            employee.Work();
+        }
+    }
+}
