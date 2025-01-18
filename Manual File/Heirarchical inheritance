@@ -1,0 +1,41 @@
+// Base class
+class Animal
+{
+    public void Eat()
+    {
+        Console.WriteLine("Eating...");
+    }
+}
+
+// Derived class 1
+class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Barking...");
+    }
+}
+
+// Derived class 2
+class Cat : Animal
+{
+    public void Meow()
+    {
+        Console.WriteLine("Meowing...");
+    }
+}
+
+// Usage
+class Program
+{
+    static void Main()
+    {
+        Dog dog = new Dog();
+        dog.Eat();  // From Animal
+        dog.Bark(); // From Dog
+
+        Cat cat = new Cat();
+        cat.Eat();  // From Animal
+        cat.Meow(); // From Cat
+    }
+}
