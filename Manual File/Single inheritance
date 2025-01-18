@@ -1,0 +1,27 @@
+using System;
+
+public class Parent
+{
+    public void DisplayParent()
+    {
+        Console.WriteLine("This is parent class");
+    }
+}
+
+public class Child : Parent
+{
+    public void DisplayChild()
+    {
+        Console.WriteLine("This is child class");
+    }
+}
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Child c1 = new Child(); 
+        c1.DisplayChild(); // Call child method
+        c1.DisplayParent(); // Call parent method
+    }
+}
