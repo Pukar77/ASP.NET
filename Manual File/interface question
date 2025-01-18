@@ -1,0 +1,36 @@
+Create a interface called Calculate having methods add (int x, int y) and diff (int x, int y) to perform
+addition and subtraction of numbers passed as arguments. Then define a class Demo that
+implements the interface calculate and display the results
+
+using System;
+
+interface ICalculate // Use PascalCase for interface names
+{
+    void Add(int x, int y);
+    void Diff(int a, int b);
+}
+
+public class Demo : ICalculate
+{
+    
+    public void Add(int x, int y)
+    {
+        Console.WriteLine("Addition: " + (x + y));
+    }
+
+   
+    public void Diff(int a, int b)
+    {
+        Console.WriteLine("Subtraction: " + (a - b));
+    }
+}
+
+class Program 
+{
+    public static void Main(string[] args) 
+    {
+        Demo d1 = new Demo();
+        d1.Add(2, 3);  // Call Add method
+        d1.Diff(3, 2); // Call Diff method
+    }
+}
