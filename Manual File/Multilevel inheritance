@@ -1,0 +1,34 @@
+using System;
+
+public class Parent
+{
+    public void DisplayParent()
+    {
+        Console.WriteLine("This is parent class");
+    }
+}
+
+public class Child : Parent
+{
+    public void DisplayChild()
+    {
+        Console.WriteLine("This is child class");
+    }
+}
+
+public class Grandchild: Child{
+    public void DisplayGrandChild(){
+        Console.WriteLine("This is grandchild class");
+    }
+}
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Grandchild c1 = new Grandchild(); 
+        c1.DisplayChild();
+        c1.DisplayParent(); 
+        c1.DisplayGrandChild();
+    }
+}
