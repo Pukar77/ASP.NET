@@ -1,0 +1,32 @@
+using System;
+
+class GenericClass<T> // T is a placeholder for any data type
+{
+    private T data;
+
+    public void SetData(T value)
+    {
+        data = value;
+    }
+
+    public T GetData()
+    {
+        return data;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating an object for integer
+        GenericClass<int> intObj = new GenericClass<int>();
+        intObj.SetData(100);
+        Console.WriteLine("Integer Value: " + intObj.GetData());
+
+        // Creating an object for string
+        GenericClass<string> stringObj = new GenericClass<string>();
+        stringObj.SetData("Hello Generics");
+        Console.WriteLine("String Value: " + stringObj.GetData());
+    }
+}
