@@ -1,0 +1,35 @@
+using System;
+
+class AgeError : Exception
+{
+    public AgeError(string msg) : base(msg) { }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        try
+        {
+          
+            Console.WriteLine("Enter your age:");
+            int age = Int32.Parse(Console.ReadLine());
+
+          
+            if (age < 16)
+            {
+                throw new AgeError("You are not eligible to vote.");
+            }
+            else
+            {
+                Console.WriteLine("Welcome! You are eligible to vote.");
+            }
+        }
+        catch (AgeError e)
+        {
+ 
+            Console.WriteLine(e.Message);
+        }
+       
+    }
+}
